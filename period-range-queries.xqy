@@ -1,5 +1,5 @@
 xquery version "1.0-ml";
-module namespace prq = "http://marklogic.com/period-range-queries";
+module namespace prq = "http://marklogic.com/query/period-range-query";
 
 declare variable $ALN_EQUALS := 1;
 declare variable $ALN_CONTAINS := 2;
