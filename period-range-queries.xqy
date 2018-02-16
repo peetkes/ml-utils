@@ -93,7 +93,7 @@ declare private function prq:aln-contained-by-dt(
 };
 
 declare private function prq:aln-meets-dt(
-  $xend as xs:QName
+  $xend as xs:QName,
   $ystart as xs:dateTime
 ) as cts:query
 {
