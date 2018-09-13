@@ -18,13 +18,8 @@ import module namespace exif = "http://marklogic.com/exif-parser" at "/lib/exif-
 
 declare option xdmp:mapping "false";
 
-let $files := (
-  "/Users/peetkes/Pictures/Oliebollen.jpeg",
-  "/Users/peetkes/Development/DIKW/Data/photos/DSCN0113.JPG",
-  "/Users/peetkes/Development/DIKW/Data/photos/DSCN0114.JPG")
- 
-for $file in $files[1]
-return exif:extract-exif-properties(xdmp:external-binary($file))
+let $image := xdmp:external-binary("some location on disk")
+return exif:extract-exif-properties(xdmp:external-binary($image))
 ```
 This will result in something like below
 
